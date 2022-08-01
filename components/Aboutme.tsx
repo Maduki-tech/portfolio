@@ -15,7 +15,7 @@ export const Aboutme: NextPage = (props: {}) => {
             Hello my Name is <span className="text-primary">David</span>
           </p>
           <p className="text-slate-200">
-            I'm a{" "}
+            I&apos;m a{" "}
             <span className="text-secondary">Freelancer/Webdeveloper</span>{" "}
             based in Germany.
           </p>
@@ -43,19 +43,21 @@ export const Aboutme: NextPage = (props: {}) => {
         </div>
       </div>
 
-      <h1 className="text-3xl text-center pt-10"><span className="text-primary">Technologies</span> I Recently worked with:</h1>
+      <h1 className="text-3xl text-center pt-10">
+        <span className="text-primary">Technologies</span> I Recently worked
+        with:
+      </h1>
 
-			<div className="pl-14 grid grid-cols-4 gap-4 pt-10">
-
-				<Tech framework={'NextJS'}/>
-				<Tech framework={'ReactJS'}/>
-				<Tech framework={'Prisma'}/>
-				<Tech framework={'PostgreSQL'}/>
-				<Tech framework={'NextAuth'}/>
-				<Tech framework={'Rust'}/>
-				<Tech framework={'GoLang'}/>
-				<Tech framework={'TailwindCSS'}/>
-			</div>
+      <div className="pl-14 grid grid-cols-4 gap-4 pt-10">
+        <Tech framework={"NextJS"} />
+        <Tech framework={"ReactJS"} />
+        <Tech framework={"Prisma"} />
+        <Tech framework={"PostgreSQL"} />
+        <Tech framework={"NextAuth"} />
+        <Tech framework={"Rust"} />
+        <Tech framework={"GoLang"} />
+        <Tech framework={"TailwindCSS"} />
+      </div>
     </div>
   );
 };
