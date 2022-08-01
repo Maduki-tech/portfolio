@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import { Tech } from "./Tech";
+import me from '../public/static/img/Me.jpeg'
 
 export const Aboutme: NextPage = (props: {}) => {
   return (
@@ -35,7 +36,7 @@ export const Aboutme: NextPage = (props: {}) => {
 
         <div className="flex justify-center">
           <Image
-            src={"/../public/Me.jpeg"}
+            src={me}
             width="300"
             height="300"
             className="rounded-full "
