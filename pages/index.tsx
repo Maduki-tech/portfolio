@@ -1,21 +1,40 @@
 import type { NextPage } from "next";
+import { ArrowCircleDownIcon } from "@heroicons/react/outline";
+import { Aboutme } from "../components/Aboutme";
+import { GetInTouch } from "../components/GetInTouch";
+import TypeAnimation from "react-type-animation";
 
 const Home: NextPage = () => {
-    return (
-        <div className="justify-center flex flex-col w-screen text-center h-screen ">
-                <h1 className="text-5xl">
-                    Hello, I'm{" "}
-                    <span className="text-[#5FDCFE]">David Schlueter</span>
-                </h1>
-                <h1 className="text-5xl">Im a Frontend Developer</h1>
+  return (
+    <div>
+      <div className="bg-[url('../public/kal-visuals-UqLV5o9h3ZQ-unsplash.jpg')] bg-cover bg-no-repeat bg-center">
+        <div className="justify-center flex flex-col w-screen text-center h-screen items-center bg-black/75">
+          <TypeAnimation
+            cursor={false}
+            sequence={["Hello, I'm David Schlueter"]}
+            wrapper="h2"
+            className="text-5xl text-slate-200"
+          />
+          <TypeAnimation
+            cursor={false}
+            sequence={[2500, "I'm a Frontend Developer"]}
+            wrapper="h2"
+            className="text-5xl text-slate-200"
+          />
 
-            <div>
-                <button className="mt-20 border-[#5FDCFE] border-2 py-2 px-4 rounded-xl text-slate-200">
-                    Get to know me
-                </button>
-            </div>
+
+          <ArrowCircleDownIcon
+            className="h-16 w-16 text-primary text-center mt-24 animate-bounce 
+				hover:animate-none hover:cursor-pointer hover:scale-110"
+            onClick={() => alert("Hello")}
+          />
         </div>
-    );
+      </div>
+      <Aboutme />
+
+      <GetInTouch />
+    </div>
+  );
 };
 
 export default Home;
